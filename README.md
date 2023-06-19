@@ -1,2 +1,2 @@
-# UOL-Compass
+# Repositório UOL-Compass
 Programa de bolsas 2023
