@@ -1,0 +1,21 @@
+{
+  "name": "sprint-4-pb-aws-ufu",
+  "version": "1.0.0",
+  "description": "avaliação sprint-4",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/js/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "fetch": "^1.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^3.3.1",
+    "router": "^1.3.8",
+    "routes": "^2.1.0"
+  }
+}

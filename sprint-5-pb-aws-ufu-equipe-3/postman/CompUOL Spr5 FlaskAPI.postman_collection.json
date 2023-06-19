@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "da299df8-31ba-4172-867d-2f512800ed5b",
+		"name": "CompUOL Spr5 FlaskAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28045695"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://g3-s5-flaskapi-env.eba-b2pwk2r2.us-east-1.elasticbeanstalk.com/",
+					"protocol": "http",
+					"host": [
+						"g3-s5-flaskapi-env",
+						"eba-b2pwk2r2",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Booking_ID\": \"INN00032\",\r\n    \"no_of_adults\": \"2\",\r\n    \"no_of_children\": \"0\",\r\n    \"no_of_weekend_nights\": \"2\",\r\n    \"no_of_week_nights\": \"2\",\r\n    \"type_of_meal_plan\": \"Meal Plan 1\",\r\n    \"required_car_parking_space\": \"0\",\r\n    \"room_type_reserved\": \"Room_Type 1\",\r\n    \"lead_time\": \"107\",\r\n    \"arrival_year\": \"2018\",\r\n    \"arrival_month\": \"11\",\r\n    \"arrival_date\": \"13\",\r\n    \"market_segment_type\": \"Online\",\r\n    \"repeated_guest\": \"0\",\r\n    \"no_of_previous_cancellations\": \"0\",\r\n    \"no_of_previous_bookings_not_canceled\": \"0\",\r\n    \"avg_price_per_room\": \"87.5\",\r\n    \"no_of_special_requests\": \"1\",\r\n    \"booking_status\": \"Not_Canceled\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://g3-s5-flaskapi-env.eba-b2pwk2r2.us-east-1.elasticbeanstalk.com/api/v1/predict",
+					"protocol": "http",
+					"host": [
+						"g3-s5-flaskapi-env",
+						"eba-b2pwk2r2",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"predict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

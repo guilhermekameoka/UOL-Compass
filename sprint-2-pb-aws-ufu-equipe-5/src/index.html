@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 2</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-desc">
+        <div class="content">
+            <h2 class="API">API Google VISION - OCR</h2>
+            <h1>Capture o Texto de sua Imagem</h1>
+            <h2 class="Sprint">Sprint 2</h2>
+        </div>
+    </header>
+
+    <section class="one">
+        <div class="sub-desc">
+            <p>
+                Insira a imagem abaixo:
+            </p>
+        </div>
+
+        <form id="form" enctype="multipart/form-data">
+            <input id="input__file" style="display: none" type="file" name="image">
+
+            <!-- Preview de imagem -->
+            <div class="picture">
+            </div>
+
+            <!-- Botão input -->
+            <button id="input__button" style="display: none" type="submit">Enviar</button>
+        </form>
+
+        <div class="buttons">
+            <a href="#" id="button-1">
+                <img src="./assets/img/button-2.svg" alt="Resetar">
+            </a>
+            <a href="#" id="button-2">
+                <img src="./assets/img/button-1.svg" alt="Enviar">
+            </a>
+        </div>
+    </section>
+
+    <section class="second">
+        <div class="sub-desc">
+            <p>
+                Resultado:
+            </p>
+
+            <div id="posts-container" class="result__final"></div>
+        </div>
+
+        <div class="box-result">
+            <span id="result"></span>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h1>Integrantes: </h1>
+            <ul class="turma">
+                <li class="integrantes">
+                    <p>Carlos Livius da Silva</p>
+                </li>
+                <li class="integrantes">
+                    <p>Fabio Romero de Souza Junior</p>
+                </li>
+                <li class="integrantes">
+                    <p>Guilherme Rimoldi Kameoka</p>
+                </li>
+                <li class="integrantes">
+                    <p>Paulo Eduardo Ferreira da Silva</p>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>Link: </h1>
+            <ul class="turma">
+                <li class="integrantes">
+                    <a href="https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu/tree/equipe-5">
+                        GitHub acess link: Equipe-5
+                    </a>
+                </li>
+            </ul>
+            <div>
+    </footer>
+</body>
+<script src="./assets/js/input.js"></script>
+<script src="./assets/js/result.js"></script>
+
+</html>
