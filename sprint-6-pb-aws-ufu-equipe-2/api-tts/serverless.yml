@@ -1,0 +1,74 @@
+service: api-tts
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+  environment:
+    BUCKET_NAME: 'sprint6-polly'
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 's3:ListBucket'
+            - 's3:PutObject'
+          Resource: 'arn:aws:s3:::sprint6-polly'
+        - Effect: Allow
+          Action:
+            - 'polly:SynthesizeSpeech'
+          Resource: '*'
+        - Effect: Allow
+          Action:
+            - 'dynamodb:BatchGetItem'
+            - 'dynamodb:GetItem'
+            - 'dynamodb:Query'
+            - 'dynamodb:Scan'
+            - 'dynamodb:BatchWriteItem'
+            - 'dynamodb:PutItem'
+            - 'dynamodb:UpdateItem'
+          Resource: 'arn:aws:dynamodb:us-east-1:033982107556:table/sprint6teste'
+
+functions:
+  health:
+    handler: handler.health
+    events:
+      - httpApi:
+          path: /
+          method: get
+  v1Description:
+    handler: handler.v1_description
+    events:
+      - httpApi:
+          path: /v1
+          method: get
+  v2Description:
+    handler: handler.v2_description
+    events:
+      - httpApi:
+          path: /v2
+          method: get
+  route_4_handler:
+    handler: route-4.route_4_handler
+    url:
+      cors: true
+    events:
+      - httpApi:
+          path: /v1/tts
+          method: post
+  route_5_handler:
+    handler: route-5.route_5_handler
+    url:
+      cors: true
+    events:
+      - httpApi:
+          path: /v2/tts
+          method: post
+  route_6_handler:
+    handler: route-6.route_6_handler
+    url:
+      cors: true
+    events:
+      - httpApi:
+          path: /v3/tts
+          method: post
