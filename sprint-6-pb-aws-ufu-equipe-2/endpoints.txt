@@ -1,0 +1,14 @@
+endpoints:
+  GET - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/
+  GET - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/v1
+  GET - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/v2
+  POST - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/v1/tts
+  POST - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/v2/tts
+  POST - https://43casm4tn4.execute-api.us-east-1.amazonaws.com/v3/tts
+
+git update-index --assume-unchanged route-4.py
+
+git update-index --no-assume-unchanged route-4.py route-5.py route-6.py
+
+
+ https://43casm4tn4.execute-api.us-east-1.amazonaws.com/

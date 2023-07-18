@@ -50,7 +50,7 @@ functions:
 ```
 - Passo 5: Abrir o arquivo index.html, conforme a imagem a seguir: 
   
-  <img src = https://github.com/Compass-pb-aws-2023-UFU/sprint-6-pb-aws-ufu/assets/123610986/79fec943-d915-45ff-b2cf-5f2531c43793 width = "400px">
+  <img src = https://github.com/Compass-pb-aws-2023-UFU/sprint-6-pb-aws-ufu/assets/123610986/167ba1c1-3dd8-4801-a13a-e6f0fab5a412 width = "400px">
 - Passo 6: Adicionar o o texto a ser convertido na rota de sua preferência:
   ```
   Lembrando:

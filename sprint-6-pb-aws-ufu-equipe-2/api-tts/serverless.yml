@@ -5,7 +5,11 @@ provider:
   name: aws
   runtime: python3.9
   environment:
-    BUCKET_NAME: 'sprint6-polly'
+    REGION: 'us-east-1'
+    BUCKET_NAME: 'sprint6-polly'	
+    TABLE_NAME: 'sprint6teste'
+  httpApi:
+    cors: true
   iam:
     role:
       statements:
@@ -29,6 +33,16 @@ provider:
             - 'dynamodb:UpdateItem'
           Resource: 'arn:aws:dynamodb:us-east-1:033982107556:table/sprint6teste'
 
+layers:
+  polly:
+    package: 
+      artifact: layers/polly/polly.zip
+  s3:
+    package:
+      artifact: layers/s3/s3.zip
+  dynamo:
+    package:
+      artifact: layers/dynamo/dynamo.zip
 functions:
   health:
     handler: handler.health
@@ -48,27 +62,33 @@ functions:
       - httpApi:
           path: /v2
           method: get
-  route_4_handler:
-    handler: route-4.route_4_handler
-    url:
-      cors: true
+  v1_tts:
+    handler: src.v1.v1_tts
+    layers:
+      - !Ref PollyLambdaLayer
+      - !Ref S3LambdaLayer
     events:
       - httpApi:
           path: /v1/tts
           method: post
-  route_5_handler:
-    handler: route-5.route_5_handler
-    url:
-      cors: true
+  v2_tts:
+    handler: src.v2.v2_tts
+    layers:
+      - !Ref PollyLambdaLayer
+      - !Ref S3LambdaLayer
+      - !Ref DynamoLambdaLayer
     events:
       - httpApi:
           path: /v2/tts
           method: post
-  route_6_handler:
-    handler: route-6.route_6_handler
-    url:
-      cors: true
+  v3_tts:
+    handler: src.v3.v3_tts
+    layers:
+      - !Ref PollyLambdaLayer
+      - !Ref S3LambdaLayer
+      - !Ref DynamoLambdaLayer
     events:
       - httpApi:
           path: /v3/tts
           method: post
+
