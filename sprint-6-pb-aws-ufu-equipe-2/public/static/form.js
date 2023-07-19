@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
         dataElement.textContent = `"created_audio": "${data.created_audio}"`;
         idElement.textContent = `"unique_id": "${data.unique_id}"`;
 
+        if (url !== "/v1/tts") {
+          idElement.textContent = `"unique_id": "${data.unique_id}"`;
+        } else {
+          idElement.textContent = "";
+        }
+
         const result = document.querySelector(".result");
         result.style.display = "block";
       } catch (error) {
