@@ -1,0 +1,38 @@
+service: vision
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  health:
+    handler: handler.health
+    events:
+      - httpApi:
+          path: /
+          method: get
+  v1Description:
+    handler: handler.v1_description
+    events:
+      - httpApi:
+          path: /v1
+          method: get
+  v2Description:
+    handler: handler.v2_description
+    events:
+      - httpApi:
+          path: /v2
+          method: get
+  v1_vision_post:
+    handler: handler.v1_vision_post
+    events:
+      - httpApi:
+          path: /v1/vision
+          method: post
+  v2_vision_post:
+    handler: handler.v2_vision_post
+    events:
+      - httpApi:
+          path: /v2/vision
+          method: post
