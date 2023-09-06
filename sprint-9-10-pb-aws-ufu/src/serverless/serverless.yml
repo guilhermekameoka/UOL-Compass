@@ -1,0 +1,125 @@
+service: rekon
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+  environment: 
+    BUCKET_POLLY: audio_bucket
+    BUCKET_IMAGES: image_bucket #bucket that will be created to store the images
+
+  # Uncomment this section if you want to configure cors for your URL
+  httpApi:
+    cors:
+      allowedOrigins:
+        - https://myservice.s3.amazonaws.com
+      allowedHeaders:
+        - Content-Type
+        - Authorization
+        - Access-Control-Allow-Headers
+        - Access-Control-Allow-Origin
+      allowedMethods:
+        - GET
+        - POST
+      allowCredentials: true
+      exposedResponseHeaders:
+        - Special-Response-Header
+      maxAge: 6000
+
+  iam:
+    role:
+      statements:
+        # Permissions for S3 bucket
+        - Effect: Allow
+          Action:
+            - 's3:ListBucket'
+            - 's3:GetObject'
+            - 's3:GetObjectAcl'
+            - 's3:PutObject'
+            - 's3:PutObjectAcl'
+            - 's3:GetBucketLocation'
+          Resource: '*'
+
+        # Permissions for rekognition
+        - Effect: "Allow"
+          Action:
+            - "rekognition:*"
+          Resource: "*" 
+
+        # Permissions for Lex
+        - Effect: "Allow"
+          Action:
+            - "lex:PostContent"
+            - "lex:PostText"
+            - "lex:PutSession"
+            - "lex:GetSession"
+            - "lex:DeleteSession"
+            - "lex:RecognizeText"
+            - "lex:RecognizeUtterance"
+            - "lex:StartConversation"
+          Resource: "*" 
+
+        # allow SynthesizeSpeech for Polly
+        - Effect: Allow
+          Action:
+            - 'polly:SynthesizeSpeech'
+          Resource: '*'
+
+        # Permissions allowing lambda to invoke function
+        - Effect: Allow
+          Action:
+            - 'lambda:InvokeFunction'
+          Resource: '*'         
+
+functions:
+
+  v1Rekognition:
+    handler: rekognition.rekognition_v1
+    events:
+      - httpApi:
+          path: /rekognition/v1
+          method: post     
+
+  v1Polly:
+    handler: polly.polly_v1
+    events:
+      - httpApi:
+          path: /polly
+          method: post   
+
+  v1Story:
+    handler: create_story.create_story_v1
+    events:
+      - httpApi:
+          path: /story
+          method: post
+    timeout: 29
+
+#run serverless plugin install -n serverless-s3-sync
+plugins:
+  - serverless-s3-sync
+  - serverless-finch
+
+resources:
+  Resources:
+    MyNewBucket:
+      Type: 'AWS::S3::Bucket'
+      Properties:
+        BucketName: ${self:provider.environment.BUCKET_IMAGES}
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+          RestrictPublicBuckets: false
+        OwnershipControls:
+          Rules:
+            - ObjectOwnership: ObjectWriter
+
+custom:
+  s3Sync:
+    - bucketName: ${self:provider.environment.BUCKET_IMAGES} 
+      localDir: ./images
+      acl: public-read
+  client:
+    bucketName: front-end-sprint-9-10-grupo-2

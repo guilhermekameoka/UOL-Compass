@@ -1,0 +1,182 @@
+{
+    "vozes": {
+        "menina": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/menina.jpg",
+            "texto": "menina",
+            "valor": "Eu tenho voz de menina"
+        },
+        "menino": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/menino.jpg",
+            "texto": "menino",
+            "valor": "Eu tenho voz de menino"
+        }
+    },
+    "desejos": {
+        "emocoes": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes.jpg",
+            "texto": "emoções",
+            "valor": "emoções"
+        },
+        "brincadeiras": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras.jpg",
+            "texto": "brincadeiras",
+            "valor": "brincadeiras"
+        },
+        "comidas": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas.jpg",
+            "texto": "comidas",
+            "valor": "comidas"
+        }
+    },
+    "emocoes": {
+        "abraco": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/abraco.jpg",
+            "texto": "abra\u00e7o",
+            "valor": "Eu quero um abra\u00e7o!"
+        },
+        "amor": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/amor.jpg",
+            "texto": "amor",
+            "valor": "Eu te amo!"
+        },
+        "mamae": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/mamae.jpg",
+            "texto": "mam\u00e3e",
+            "valor": "Quero a mam\u00e3e!"
+        },
+        "papai": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/papai.jpg",
+            "texto": "papai",
+            "valor": "Quero o papai!"
+        },
+        "vozinho": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/avo-homem.jpg",
+            "texto": "vov\u00f4",
+            "valor": "Quero o vov\u00f4"
+        },
+        "vozinha": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/avo-mulher.jpg",
+            "texto": "vov\u00f3",
+            "valor": "Quero a vov\u00f3"
+        },
+        "doente": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/doente.jpg",
+            "texto": "doente",
+            "valor": "Estou doente!"
+        },
+        "feliz": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/feliz.jpg",
+            "texto": "feliz",
+            "valor": "Estou feliz!"
+        },
+        "nervoso": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/nervoso.jpg",
+            "texto": "nervoso",
+            "valor": "Estou com raiva!"
+        },
+        "sono": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/sono.jpg",
+            "texto": "sono",
+            "valor": "Estou com sono"
+        },
+        "triste": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/emocoes/triste.jpg",
+            "texto": "triste",
+            "valor": "Estou triste!"
+        }
+    },
+    "brincadeiras": {
+        "bola": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/bola.jpg",
+            "texto": "bola",
+            "valor": "Quero jogar bola"
+        },
+        "boneca": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/boneca.jpg",
+            "texto": "boneca",
+            "valor": "Quero brincar de boneca"
+        },
+        "carrinho": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/carrinho.jpg",
+            "texto": "carrinho",
+            "valor": "Quero brincar de carrinho"
+        },
+        "desenho": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/desenho.jpg",
+            "texto": "desenho",
+            "valor": "Quero desenhar"
+        },
+        "jogo": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/jogo.jpg",
+            "texto": "jogo",
+            "valor": "Quero jogar videogame"
+        },
+        "livro": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/livro.jpg",
+            "texto": "livro",
+            "valor": "Quero ler um livro"
+        },
+        "piscina": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/piscina.jpg",
+            "texto": "piscina",
+            "valor": "Quero brincar na piscina"
+        },
+        "skate": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/brincadeiras/skate.jpg",
+            "texto": "skate",
+            "valor": "Quero brincar de skate"
+        }
+    },
+    "comidas": {
+        "batata": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/batata.jpg",
+            "texto": "batata",
+            "valor": "Quero batata"
+        },
+        "rosquinha": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/donut.jpg",
+            "texto": "rosquinha",
+            "valor": "Quero comer rosquinha"
+        },
+        "maca": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/maca.jpg",
+            "texto": "ma\u00e7\u00e3",
+            "valor": "Quero comer uma ma\u00e7\u00e3"
+        },
+        "macarrao": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/macarrao.jpg",
+            "texto": "macarr\u00e3o",
+            "valor": "Quero macarr\u00e3o"
+        },
+        "picole": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/picole.jpg",
+            "texto": "picol\u00e9",
+            "valor": "Quero um picol\u00e9"
+        },
+        "pizza": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/pizza.jpg",
+            "texto": "pizza",
+            "valor": "Quero comer pizza"
+        },
+        "sanduiche": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/sanduiche.jpg",
+            "texto": "sandu\u00edche",
+            "valor": "Quero comer sanduiche"
+        },
+        "sorvete": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/sorvete.jpg",
+            "texto": "sorvete",
+            "valor": "Quero tomar sorvete"
+        },
+        "suco": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/suco.jpg",
+            "texto": "suco",
+            "valor": "Quero tomar suco"
+        },
+        "legumes": {
+            "link": "https://meu_bucket.s3.amazonaws.com/expressar/comidas/vegetal.jpg",
+            "texto": "legumes",
+            "valor": "Quero comer legumes"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+service: botFunction
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+
+  environment: 
+    RAPID_API: rapid_api_key #Miscrosoft translator
+    BUCKET_IMAGES: image_bucket #Bucket images created through serverless deploy or existing one
+    ASYNC_FUNCTION_NAME: ${self:service}-dev-AsyncBotMessage
+    INVOKE_URL: invoke_url_from_serverless_deploy
+    KEY_API_KOM: kommunicate_key
+    KEY_API_OPENAI: openai_key
+
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 'lambda:InvokeFunction'
+          Resource: '*'         
+
+functions:
+
+  botFunction:
+    handler: lambda_function.lambda_handler
+    timeout: 29
+
+  AsyncBotMessage:
+    handler: async_message.lambda_handler
+    timeout: 29
+

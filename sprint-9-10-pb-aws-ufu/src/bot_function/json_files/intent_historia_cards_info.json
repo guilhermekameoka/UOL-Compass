@@ -1,0 +1,95 @@
+{
+    "protagonists": {
+        "gato": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/protagonistas/gato.jpg",
+            "texto": "gato",
+            "valor": "gato"
+        },
+        "cachorro": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/protagonistas/cachorro.jpg",
+            "texto": "cachorro",
+            "valor": "cachorro"
+        },
+        "abelha": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/protagonistas/abelha.jpg",
+            "texto": "abelha",
+            "valor": "abelha"
+        },
+        "galinha": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/protagonistas/galinha.jpg",
+            "texto": "galinha",
+            "valor": "galinha"
+        }
+    },
+    "clima": {
+        "chuvoso": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/clima/chuvoso.jpg",
+            "texto": "chuvoso",
+            "valor": "chuvoso"
+        },
+        "ensolarado": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/clima/ensolarado.jpg",
+            "texto": "ensolarado",
+            "valor": "ensolarado"
+        },
+        "nublado": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/clima/nublado.jpg",
+            "texto": "nublado",
+            "valor": "nublado"
+        },
+        "trovejando": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/clima/trovejando.jpg",
+            "texto": "trovejando",
+            "valor": "trovejando"
+        }
+    },
+    "veiculo": {
+        "aviao": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/veiculo/aviao.jpg",
+            "texto": "avi\u00e3o",
+            "valor": "avi\u00e3o"
+        },
+        "bicicleta": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/veiculo/bicicleta.jpg",
+            "texto": "bicicleta",
+            "valor": "bicicleta"
+        },
+        "carro": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/veiculo/carro.jpg",
+            "texto": "carro",
+            "valor": "carro"
+        },
+        "navio": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/veiculo/navio.jpg",
+            "texto": "navio",
+            "valor": "navio"
+        },
+        "foguete": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/veiculo/foguete.jpg",
+            "texto": "foguete",
+            "valor": "foguete"
+        }
+    },
+    "local": {
+        "espaco": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/local/espaco.jpg",
+            "texto": "espa\u00e7o",
+            "valor": "espa\u00e7o"
+        },
+        "floresta": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/local/floresta.jpg",
+            "texto": "floresta",
+            "valor": "floresta"
+        },
+        "mar": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/local/mar.jpg",
+            "texto": "mar",
+            "valor": "mar"
+        },
+        "praia": {
+            "link": "https://meu_bucket.s3.amazonaws.com/historia_cards/local/praia.jpg",
+            "texto": "praia",
+            "valor": "praia"
+        }
+    }
+}
